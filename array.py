@@ -42,3 +42,34 @@ for i in numeros3:
 print(f"\npar: {par} | impar: {impar}")
 
 #exercício 4 = a junção de tudo
+
+import array
+numeros4 = array.array('i', [3, 7, 2, 9, 4, 1, 6, 8])
+
+soma1 = 0
+maior1 = numeros4[0]
+menor1 = numeros4[0]
+par1 = 0
+impar1 = 0
+
+#soma
+for i in numeros4:
+    soma1 += i
+
+#maiormenor
+for i in numeros4:
+    if maior1 < i:
+        maior1 = i
+    elif menor1 > i:
+        menor1 = i
+
+#parimpar
+for i in numeros4:
+    if i%2 == 0:
+        par1 += 1
+    else:
+        impar1 += 1
+
+print(f'\nSoma: {soma1}')
+print(f'Maior: {maior1} | Menor: {menor1}')
+print(f"Par: {par1} | Ímpar: {impar1}\n")
